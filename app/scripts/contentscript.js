@@ -27,7 +27,8 @@ document.addEventListener('gccAddToList', function() {
   var geoData = { lat: lat,
                   lon: lon,
                   id: id,
-                  desc: desc
+                  desc: desc,
+                  url: window.location.href
                 };
 
   //construct message to background script

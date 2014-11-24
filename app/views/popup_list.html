@@ -1,6 +1,18 @@
-<ul>
-  <li ng-repeat="cache in listOfCaches">{{cache.id}}</li>
-</ul>
+<div class="container cachecontainer" ng-repeat="cache in listOfCaches">
+  <div class="row">
+    <div class="col-xs-6 id">{{cache.id}}</div>
+    <div class="col-xs-6 location">{{cache.lat}},{{cache.lon}}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 desc">{{cache.desc}}</div>
+  </div>
+</div>
 
-<button ng-click="downloadCsvFile()">Save</button>
-<button ng-click="clearListOfCaches()">Clear</button>
+<div class="container buttoncontainer">
+  <div class="col-xs-6 button-save">
+    <button class="btn btn-primary" ng-click="downloadCsvFile()">Save</button>
+  </div>
+  <div class="col-xs-6 button-clear">
+    <button class="btn btn-danger" ng-click="clearListOfCaches()">Clear</button>
+  </div>
+</div>

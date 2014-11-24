@@ -1,7 +1,31 @@
 body {
   padding: 0px;
+  background-color:#f9f6f4;
+  color:#4f2412;
 }
 
-ul#geocacheList {
+div.cachecontainer {
   width:400px;
+  margin-bottom:3px;
+  background-color:#e9e0db;
+  border:1px solid #c9a798;
+}
+
+div.buttoncontainer {
+  width:400px;
+}
+
+div.location {
+  text-align:right;
+}
+
+div.button-clear {
+  text-align:right;
+}
+
+div.id {
+  font-weight:bold;
+}
+div.location {
+  color:#0e0e0e;
 }

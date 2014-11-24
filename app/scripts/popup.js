@@ -46,7 +46,7 @@ geocacheListPopup.controller('MainCtrl', ['$scope',
     
     //create invisible anchor containing csv data and click it to start the download
     var link = document.createElement('a');
-    link.download = 'geocaches.csv';
+    link.download = 'geocaches_' + Date.now().toString() + '.csv';
     link.href = 'data:text/csv,' + encodeURIComponent(csvString);
     link.click();
   };
