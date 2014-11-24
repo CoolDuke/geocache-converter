@@ -1,3 +1,7 @@
 body {
   padding: 0px;
 }
+
+ul#geocacheList {
+  width:400px;
+}

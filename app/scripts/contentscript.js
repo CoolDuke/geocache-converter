@@ -13,8 +13,15 @@ document.addEventListener('gccAddToList', function() {
   if(m[4] === 'W') { lon *= -1; }
   lon = Math.round(lon * 1000000) / 1000000;
   
-  //TODO don't make a string out of it here - send an object instead
-  var geoData = lon + ',' + lat + ',"' + document.title.replace(/\"/gi, '') + '"';
+  var title = document.title.replace(/\"/gi, '');
+  var id = title.split(' ')[0];
+  var desc = title.replace(id + ' ', '');
+  
+  var geoData = { lat: lat,
+                  lon: lon,
+                  id: id,
+                  desc: desc
+                };
 
   var addData = {type: 'addGeocache', data: geoData};
 

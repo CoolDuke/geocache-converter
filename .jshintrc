@@ -20,5 +20,6 @@
   "smarttabs": true,
   "globals" : {
     "chrome": true
-  }
+  },
+  "predef": ["angular"]
 }

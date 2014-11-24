@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     //add item only once
     var found = false;
     for (var i=0; i<listOfCaches.length; i++) {
-      if (listOfCaches[i] === request.data) {
+      if (listOfCaches[i].id === request.data.id) {
         found = true;
       }
     }
