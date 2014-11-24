@@ -5,14 +5,14 @@ body {
 }
 
 div.cachecontainer {
-  width:400px;
+  width:450px;
   margin-bottom:3px;
   background-color:#e9e0db;
   border:1px solid #c9a798;
 }
 
 div.buttoncontainer {
-  width:400px;
+  width:450px;
 }
 
 div.location {
@@ -28,4 +28,9 @@ div.id {
 }
 div.location {
   color:#0e0e0e;
+}
+
+div.emptymessage {
+  width:450px;
+  text-align:center;
 }

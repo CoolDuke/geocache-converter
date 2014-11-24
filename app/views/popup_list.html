@@ -8,11 +8,15 @@
   </div>
 </div>
 
-<div class="container buttoncontainer">
+<div class="container buttoncontainer" ng-if="listOfCaches.length">
   <div class="col-xs-6 button-save">
     <button class="btn btn-primary" ng-click="downloadCsvFile()">Save</button>
   </div>
   <div class="col-xs-6 button-clear">
     <button class="btn btn-danger" ng-click="clearListOfCaches()">Clear</button>
   </div>
+</div>
+
+<div class="container emptymessage" ng-if="!listOfCaches.length">
+  <p>You have to add one or more caches from geocaching.com</p>
 </div>
