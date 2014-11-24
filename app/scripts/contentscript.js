@@ -38,7 +38,9 @@ for(var i=0; i<elements.length; i++) {
   var anchor = elements[i];
   if (anchor.innerHTML === 'Ignore') {
     console.log('found something to hook');
-	
-    anchor.parentNode.outerHTML+='<li><a href="javascript:document.dispatchEvent(evt)" style="background-image:url(/images/icons/16/bookmark_list.png)">Add to Converter list</a></li>';
+    
+    //get url for link icon
+    var iconUrl = chrome.extension.getURL('images/icon-16.png');
+    anchor.parentNode.outerHTML+='<li><a href="javascript:document.dispatchEvent(evt)" style="background-image:url(' + iconUrl + ')">Add to converter list</a></li>';
   }
 }

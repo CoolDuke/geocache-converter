@@ -29,8 +29,8 @@
   "content_scripts": [
     {
       "matches": [
-        "http://www.geocaching.com/geocache/GC*",
-        "https://www.geocaching.com/geocache/GC*"
+        "http://www.geocaching.com/*",
+        "https://www.geocaching.com/*"
       ],
       "css": [
         "styles/main.css"
@@ -42,9 +42,10 @@
       "all_frames": false
     }
   ],
+  "web_accessible_resources": [ "images/icon-16.png" ],
   "permissions": [
     "tabs",
-    "http://www.geocaching.com/geocache/GC*",
-    "https://www.geocaching.com/geocache/GC*"
+    "http://www.geocaching.com/*",
+    "https://www.geocaching.com/*"
   ]
 }
