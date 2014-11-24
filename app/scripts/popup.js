@@ -22,6 +22,11 @@ geocacheListPopup.config(['$routeProvider',
 geocacheListPopup.controller('MainCtrl', ['$scope',
   function($scope) {
 
+  //get localized strings
+  $scope.emptyMessage = chrome.i18n.getMessage('view_popup_list_emptyMessage');
+  $scope.saveButtonText = chrome.i18n.getMessage('view_popup_list_saveButtonText');
+  $scope.clearButtonText = chrome.i18n.getMessage('view_popup_list_clearButtonText');
+
   //initialize an empty list
   $scope.listOfCaches = [];
   

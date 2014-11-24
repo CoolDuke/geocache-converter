@@ -54,13 +54,16 @@ var elements = document.getElementsByTagName('a');
 for(var i=0; i<elements.length; i++) {
   var anchor = elements[i];
   //we want to hook in after the Ignore link
-  if (anchor.innerHTML === 'Ignore') {
+  if (anchor.innerHTML === 'Ignore' || anchor.innerHTML === 'Listing ignorieren') {
     console.log('found something to hook');
     
     //get url for link icon
     var iconUrl = chrome.extension.getURL('images/icon-16.png');
 
+    //get localized string
+    var injectionAnchorString = chrome.i18n.getMessage('injectionAnchorString');
+
     //add new li element after the anchor's parent
-    anchor.parentNode.outerHTML+='<li><a href="javascript:document.dispatchEvent(evt)" style="background-image:url(' + iconUrl + ')">Add to converter list</a></li>';
+    anchor.parentNode.outerHTML+='<li><a href="javascript:document.dispatchEvent(evt)" style="background-image:url(' + iconUrl + ')">' + injectionAnchorString + '</a></li>';
   }
 }

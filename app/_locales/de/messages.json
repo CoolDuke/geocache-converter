@@ -5,27 +5,27 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Creates CSV files compatible to Nissans GPS directly from geocaching.com",
+    "message": "Erstellt CSV-Dateien direkt aus geocaching.com heraus, die kompatibel zum Nissan-GPS sind",
     "description": "The description of the application"
   },
   
   //scripts/contentscript.js
   "injectionAnchorString": {
-    "message": "Add to converter list",
+    "message": "Konvertieren",
     "description": "The title of the link that is injected to the cache detail page"
   },
   
   //view/popup_list.html
   "view_popup_list_emptyMessage": {
-    "message": "You have to add one or more caches from geocaching.com first.",
+    "message": "Es wurden noch keine Caches von geocaching.com hinzugefügt.",
     "description": "String to show in the popup window if the list is empty"
   },
   "view_popup_list_saveButtonText": {
-    "message": "Save",
+    "message": "Speichern",
     "description": "String to show on the save button in the popup window"
   },
   "view_popup_list_clearButtonText": {
-    "message": "Clear",
+    "message": "Löschen",
     "description": "String to show on the clear button in the popup window"
   }
 }
