@@ -44,7 +44,6 @@
   ],
   "web_accessible_resources": [ "images/icon-16.png" ],
   "permissions": [
-    "tabs",
     "http://www.geocaching.com/*",
     "https://www.geocaching.com/*"
   ]
