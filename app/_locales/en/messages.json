@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "geocache-converter",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Creates CSV files compatible to Nissans GPS directly from geocaching.com",
+    "description": "The description of the application"
+  }
+}
