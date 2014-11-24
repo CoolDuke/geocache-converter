@@ -12,13 +12,15 @@ document.addEventListener('gccAddToList', function() {
   var lon = parseInt(m[5]) + m[6]/60;
   if(m[4] === 'W') { lon *= -1; }
   lon = Math.round(lon * 1000000) / 1000000;
-
+  
+  //TODO don't make a string out of it here - send an object instead
   var geoData = lon + ',' + lat + ',"' + document.title.replace(/\"/gi, '') + '"';
- 
+
   var addData = {type: 'addGeocache', data: geoData};
 
   chrome.runtime.sendMessage(addData, function(response) {
-    console.log(response.status);
+    //TODO show an error message if not ok
+    response.status = null; //ignore response for now
   });
 });
 

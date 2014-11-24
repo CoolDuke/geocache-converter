@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
   console.log('previousVersion', details.previousVersion);
 });
 
-chrome.browserAction.setBadgeText({text: '\'Allo'});
+chrome.browserAction.setBadgeText({text: '0'});
 
 console.log('\'Allo \'Allo! Event Page for Browser Action');
 
@@ -25,10 +25,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
     if (!found) {
       listOfCaches.push(request.data);
+      chrome.browserAction.setBadgeText({text: listOfCaches.length.toString()});
     }
+    
+  } else if (request.type === 'listGeocaches') {
+    sendResponse(listOfCaches);
   }
 });
-
-/* TODO   - show listOfItems in popup and make it editable
- *        - add number of selected items to extension item (setBadgeText see above)
- */
